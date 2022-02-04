@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="jp">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="小野トップページ" />
+<meta name="keywords" content="トップページ" />
+<title>惑星位置計算システム</title>
+<link rel="stylesheet" href="reset.css">
+<link rel="stylesheet" href="top_style.css">
+</head>
+
+
+<body>
+	<div id="header">
+		<div class="inner">
+			<h1>惑星位置計算システム</h1>
+		</div>
+	</div>
+
+	<div class="page">
+		<div class="setumei">
+			<p>
+				太陽と惑星の★赤経★赤緯★地心距離★グリニッジ時角を示し<br>
+				更に、太陽と惑星の位置を2次元・3次元グラフで示します。				
+			</p>
+		</div>
+		<div class="tyu_i">
+			<div>
+				<p><span>⚠</span>水星のデータはありません<span>⚠</span></p>
+			</div>
+			<div>
+				<p><span>⚠</span>2009年～2022年12月31日のみです<span>⚠</span></p>
+			</div>
+		</div>
+		<div class="sentaku">
+			<form action="result.php" method="post">
+
+				<p>
+				西暦
+					
+					<select name="year" class="s_s">
+					<option value="2009">2009</option>
+					<option value="2010">2010</option>
+					<option value="2011">2011</option>
+					<option value="2012">2012</option>
+					<option value="2013">2013</option>
+					<option value="2014">2014</option>
+					<option value="2015">2015</option>
+					<option value="2016">2016</option>
+					<option value="2017">2017</option>
+					<option value="2018">2018</option>
+					<option value="2019">2019</option>
+					<option value="2020">2020</option>
+					<option value="2021">2021</option>
+					<option value="2022">2022</option>
+					</select>
+					年
+
+					<select name="month" class="s">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					</select>
+					月
+
+					<select name="day" class="s">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+					</select>
+					日<br>　　　　
+				<!-- </p> -->
+				<!-- <p class="iro">　　　　 -->
+					<select name="hour" class="s">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					</select>
+					時
+
+					<select name="minuts" class="s">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+					<option value="32">32</option>
+					<option value="33">33</option>
+					<option value="34">34</option>
+					<option value="35">35</option>
+					<option value="36">36</option>
+					<option value="37">37</option>
+					<option value="38">38</option>
+					<option value="39">39</option>
+					<option value="40">40</option>
+					<option value="41">41</option>
+					<option value="42">42</option>
+					<option value="43">43</option>
+					<option value="44">44</option>
+					<option value="45">45</option>
+					<option value="46">46</option>
+					<option value="47">47</option>
+					<option value="48">48</option>
+					<option value="49">49</option>
+					<option value="50">50</option>
+					<option value="51">51</option>
+					<option value="52">52</option>
+					<option value="53">53</option>
+					<option value="54">54</option>
+					<option value="55">55</option>
+					<option value="56">56</option>
+					<option value="57">57</option>
+					<option value="58">58</option>
+					<option value="59">59</option>
+					</select>
+					分
+
+					<select name="second">
+					<option value="0">0</option>
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+					<option value="14">14</option>
+					<option value="15">15</option>
+					<option value="16">16</option>
+					<option value="17">17</option>
+					<option value="18">18</option>
+					<option value="19">19</option>
+					<option value="20">20</option>
+					<option value="21">21</option>
+					<option value="22">22</option>
+					<option value="23">23</option>
+					<option value="24">24</option>
+					<option value="25">25</option>
+					<option value="26">26</option>
+					<option value="27">27</option>
+					<option value="28">28</option>
+					<option value="29">29</option>
+					<option value="30">30</option>
+					<option value="31">31</option>
+					<option value="32">32</option>
+					<option value="33">33</option>
+					<option value="34">34</option>
+					<option value="35">35</option>
+					<option value="36">36</option>
+					<option value="37">37</option>
+					<option value="38">38</option>
+					<option value="39">39</option>
+					<option value="40">40</option>
+					<option value="41">41</option>
+					<option value="42">42</option>
+					<option value="43">43</option>
+					<option value="44">44</option>
+					<option value="45">45</option>
+					<option value="46">46</option>
+					<option value="47">47</option>
+					<option value="48">48</option>
+					<option value="49">49</option>
+					<option value="50">50</option>
+					<option value="51">51</option>
+					<option value="52">52</option>
+					<option value="53">53</option>
+					<option value="54">54</option>
+					<option value="55">55</option>
+					<option value="56">56</option>
+					<option value="57">57</option>
+					<option value="58">58</option>
+					<option value="59">59</option>
+					</select>
+					秒	
+			   </p>			   
+			   <input type="hidden" name="nanboku" value="1">
+			   <input type="hidden" name="ido" value="35">
+			   <input type="hidden" name="touzai" value="1">
+			   <input type="hidden" name="keido" value="135">		   
+			   <input type="submit" value="計算" class="btn">
+			</form>
+		</div>
+		
+		<h2>～解説～</h2>
+		<div class="kaisetu">
+			<div class="box_list">
+				<ul>
+					<li>
+						<span class="st">天球</span>
+						地球を包み込むような、自転軸を南北とした仮想の球を考えます。<br>
+						これが「天球」です。地球から観測できる天体は、距離がいくら違っても<br>
+						全て天球上にあるかのように見えます。
+					</li>
+					<li>
+						<span class="st">赤経・赤緯</span>
+						天球上での経度、緯度をそれぞれ「赤経」「赤緯」といいます。<br>
+						春分点を基準とし、赤経は「時/分/秒」で表す。地球を24等分し、<br>
+						15°を1時、15'を1分、15"を1秒と換算します。<br>
+						赤緯は天の赤道を0°、天の北極を+90°、天の南極を-90°<br>
+						として計ります。
+					</li>
+					<li>
+						<span class="st">春分点</span>
+						天の赤道と黄道の2つの交点のうち、黄道が赤道を南から北へ<br>
+						交わる点のことです。現在はうお座付近にあるとされています。
+					</li>
+					<li>
+						<span class="st">視赤経・視赤緯</span>
+						予測計算などで導かれた赤経・赤緯とは少しずれた位置に天体が<br>
+						観測されます。これは歳差運動や章動などの影響です。歳差運動や<br>
+						章動でずれた実際の赤経・赤緯を「視赤経・視赤緯」といいいます。
+					</li>
+					<li>
+						<span class="st">地心距離</span>
+						地球の中心から対象の天体の中心までの距離のことです。
+					</li>
+					<li>
+						<span class="st">グリニッジ時角</span>
+						観測者の天頂にある、天の赤道を垂直に通る子午線。そこから
+						東の方向に、天体までの角度が「時角」です。
+						観測地点をロンドンのグリニッジ天文台を通る「グリニッジ子午線」
+						上とした際の時角を「グリニッジ時角」といいます。					
+					</li>
+				</ul>
+			</div>
+			<div class="box_img">
+				<p>
+					<img src="img_data/syunbunten.png" class="img">
+				</p>
+				<p>
+					<img src="img_data/setumei.png" class="img">
+				</p>
+			</div>
+		</div>
+			<h2>～参考～</h2>
+			<div class="sankou">
+				<p>
+					＜海上保安庁 海洋情報部 天文・暦情報＞<br>
+					<a href= "https://www1.kaiho.mlit.go.jp/KOHO/index.html" target="_blank">https://www1.kaiho.mlit.go.jp/KOHO/index.html</a>
+				</p>
+				<p>
+					＜理科年表オフィシャルサイト＞<br>
+					<a href= "https://www.rikanenpyo.jp/kaisetsu/koyomi/koyomi_012.html" target="_blank">https://www.rikanenpyo.jp/kaisetsu/koyomi/koyomi_012.html</a>
+				</p>
+				<p>
+					＜天球座標とその変換 ― ISAS/JAXA＞<br>
+					<a href= https://www.ir.isas.jaxa.jp/~maruma/kougi/sec2_190411.pdf target="_blank">https://www.ir.isas.jaxa.jp/~maruma/kougi/sec2_190411.pdf</a>
+				</p>
+			</div>
+	</div>
+	<img src="img_data/mame13-01.png">
+</body>
+
+</html>
